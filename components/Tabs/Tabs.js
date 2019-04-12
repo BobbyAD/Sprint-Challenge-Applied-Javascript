@@ -29,6 +29,7 @@ class TabLink {
     this.cards.forEach(element => {
       new TabCard(element);
     })
+
     this.selectTab = this.selectTab.bind(this);
     // Add a click event that invokes this.selectTab
     this.tabElement.addEventListener('click', this.selectTab);
@@ -62,6 +63,7 @@ class TabLink {
 
 class TabCard {
   constructor(cardElement){
+    // console.log('actually getting called');
     // Assign this.cardElement to the cardElement DOM reference
     this.cardElement = cardElement;
     this.selectCard = this.selectCard.bind(this);
